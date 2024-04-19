@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-700">
         {children}
         <Analytics />
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f55ea00841c04ae394cf33069bca66e0"}'></script>
         </body>
     </html>
   )
