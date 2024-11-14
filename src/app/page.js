@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <div className="p-8">
         <h1 className="text-4xl font-bold text-white">Random Woody</h1>
-        <Image src={res.Image}  width={512} height={512} alt={"woody number " + res.ID} title="woody" className="border border-white border-x-4 border-y-4"/>
+        <Image src={res.Image} priority=true alt={"woody number " + res.ID} title="woody" className="border border-white border-x-4 border-y-4"/>
         <p className="text-white">
           This Woody (ID): {res.ID}<br />
           <a onClick={() => {window.location.reload()}} className="cursor-pointer">New Woody</a><br />
