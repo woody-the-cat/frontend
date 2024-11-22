@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 
 import Image from "next/image";
+import Link from 'next/link'
 
 export default function WoodyByID() {
     const params = useParams()
@@ -27,7 +28,7 @@ export default function WoodyByID() {
         return(
             <div>
                 <h1 className="text-white text-4xl font-bold">An error has occoured.</h1>
-                <p className="text-white">This is likely due to your search.<br /><a href="/">Return to homepage.</a></p>
+                <p className="text-white">This is likely due to your search.<br /><Link href="/">Return to homepage.</Link></p>
             </div>
         )
     } else {
@@ -38,10 +39,10 @@ export default function WoodyByID() {
                 <Image src={res.Image}  width={512} height={512} alt={"woody number " + id} title="woody" className="border border-white border-x-4 border-y-4"/>
                 <p className="text-white">
                   This Woody (ID): {id}<br />
-                  <a href="/">Random Woody</a>
+                  <Link href="/">Random Woody</Link>
                   <br /><br />
-                  <a href={"https://purr.woody.cat/" + id}>Woody REST API (this Woody)</a><br />
-                  <a href="https://purr.woody.cat/">Woody REST API (random Woody)</a>
+                  <Link href={"https://purr.woody.cat/" + id}>Woody REST API (this Woody)</Link><br />
+                  <Link href="https://purr.woody.cat/">Woody REST API (random Woody)</Link>
                 </p>
               </div>
             </div>
