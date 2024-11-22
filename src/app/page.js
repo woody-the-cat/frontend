@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
 import Image from "next/image";
-import Link from 'next/link'
 import { useState, useEffect } from "react";
 export default function Home() {
   const [res, setRes] = useState([]);
@@ -19,11 +18,11 @@ export default function Home() {
         <Image src={res.Image} priority={true} alt={"woody number " + res.ID} title="woody" className="border border-white border-x-4 border-y-4"/>
         <p className="text-white">
           This Woody (ID): {res.ID}<br />
-          <Link onClick={() => {window.location.reload()}} className="cursor-pointer">New Woody</Link><br />
-          <Link href={"/id/" + res.ID}>This Woody (permalink)</Link>
+          <a onClick={() => {window.location.reload()}} className="cursor-pointer">New Woody</a><br />
+          <a href={"/id/" + res.ID}>This Woody (permaa)</a>
           <br /><br />
-          <Link href={"https://purr.woody.cat/" + res.ID}>Woody REST API (this Woody)</Link><br />
-          <Link href="https://purr.woody.cat/">Woody REST API (random Woody)</Link>
+          <a href={"https://purr.woody.cat/" + res.ID}>Woody REST API (this Woody)</a><br />
+          <a href="https://purr.woody.cat/">Woody REST API (random Woody)</a>
         </p>
       </div>
     </div>
